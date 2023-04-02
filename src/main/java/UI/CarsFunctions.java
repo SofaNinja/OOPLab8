@@ -1,16 +1,18 @@
 package UI;
 
-import carsProcessor.CarsList;
+import carsProcessor.CarsMap;
 
 import java.util.Scanner;
 
 public interface CarsFunctions {
-    void printAllCars(CarsList cars);
-    void addNewCar(CarsList cars, Scanner scanner);
-    void deleteElementById(CarsList cars, Scanner scanner);
-    void printCarOfTheSameModel(CarsList cars, Scanner scanner);
-    void printModelInUseMoreThenYears(CarsList cars, Scanner scanner);
-    void printReleaseYearWithPriceMoreThen(CarsList cars, Scanner scanner);
-    void sortByPrice(CarsList cars, Scanner scanner);
-    void createCarsArray(CarsList cars);
+    void createCarsArray(CarsMap cars);
+    void printCarsMap(CarsMap cars);
+    void addNewCar(CarsMap cars, Scanner scanner);
+    void deleteElementById(CarsMap cars, Scanner scanner);
+    void printCarOfTheSameModelByReleaseYear(CarsMap cars, Scanner scanner);
+    void printModelInUseMoreThenYears(CarsMap cars, Scanner scanner);
+    void printReleaseYearWithPriceMoreThen(CarsMap cars, Scanner scanner);
+    void printSortByPrice(CarsMap cars);
+    void printCarModels(CarsMap cars);
+    void printCarsByModels(CarsMap cars);
 }

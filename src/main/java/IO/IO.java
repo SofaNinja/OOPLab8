@@ -1,8 +1,13 @@
 package IO;
 
 import carsProcessor.Car;
-import carsProcessor.CarsList;
+import carsProcessor.CarsMap;
+
+import java.util.Map;
+
 public interface IO {
-    Car[] readObjects(CarsList cars);
-    void writeObjects(CarsList cars);
+    Map<Integer, Car> readObjectsTxt(String fileName);
+    void writeObjectsTxt(CarsMap cars, String fileName);
+    Map<Integer, Car> readObjectsJson(String fileName);
+    void writeObjectsJson(CarsMap cars, String fileName);
 }
