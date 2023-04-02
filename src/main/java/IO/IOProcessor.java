@@ -30,7 +30,7 @@ public class IOProcessor implements IO {
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.registerModule(new JavaTimeModule());
         try {
-            List<Car> cars = objectMapper.readValue(new File(fileName), new TypeReference<List<Car>>() {});
+            List<Car> cars = objectMapper.readValue(new File(fileName), new TypeReference<>() {});
             Map<Integer, Car> carMap = new HashMap<>();
             for (Car car : cars) carMap.put(car.getId(), car);
             return carMap;
@@ -57,7 +57,7 @@ public class IOProcessor implements IO {
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.registerModule(new JavaTimeModule());
         try {
-            List<Car> cars = objectMapper.readValue(new File(fileName), new TypeReference<List<Car>>() {});
+            List<Car> cars = objectMapper.readValue(new File(fileName), new TypeReference<>() {});
             Map<Integer, Car> productMap = new HashMap<>();
             for (Car car : cars) productMap.put(car.getId(), car);
             return productMap;

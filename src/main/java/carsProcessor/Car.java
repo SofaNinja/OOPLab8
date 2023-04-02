@@ -18,7 +18,7 @@ public class Car implements Serializable, Comparable<Car> {
         this.price = price;
         this.registrationNumber = registrationNumber;
     }
-
+    public Car() {}
     public void setID(int id) { this.id = id; }
     public void setModel(String model) { this.model = model; }
     public void setReleaseYear(int releaseYear) { this.releaseYear = releaseYear; }
